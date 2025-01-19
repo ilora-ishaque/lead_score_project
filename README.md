@@ -32,7 +32,7 @@ From the exploratory data analysis, we found out that 'Converted' behaviour patt
 ## Features Selection 
 
 The dataset came with many multi-categorical features with low predictive power. Thorough feature selection including importance feature selection was performed. Columns dropped were ..... 
-This achieved a  __ increas in ptocessing time and a __ decrease in space. 
+This achieved a  __ increase in ptocessing time and a __ decrease in space. 
 
 As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8.
 
@@ -53,6 +53,12 @@ The best performing model is CatBoost with the following parameters:
  ![ROC and PR curves](assets/roc_pr_curves.png)
 
 
+CatBoost and LightGBM  have practically identical ROC AUC values. From the PR AUC curves, we can also see that the two models are very similar. Nevertheless, CatBoost performs marginally better, thus it is chosen.
+
+### Model Explainability
+The selected model benefits mostly by the contribution of all the features. However the total time spent on the website and whether the lead has tag 'Will revert after reading email' or not, seem to disproportionately have high importance. 
+
+![Shap](assets/shap_beeswarm_plot.png)
 
 
 
