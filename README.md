@@ -29,12 +29,12 @@ From the exploratory data analysis, we found out that 'Converted' behaviour patt
 * Leads that interacted with a sales person (e.g. via chat option, phone call) have much higher rates of conversion
 * Majority of information collected is not useful for lead conversion prediction
 
-## Features Selection 
+<!-- ## Features Selection 
 
 The dataset came with many multi-categorical features with low predictive power. Thorough feature selection including importance feature selection was performed. Columns dropped were ..... 
 This achieved a  __ increase in ptocessing time and a __ decrease in space. 
 
-As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8.
+As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8. --!>
 
 ## Model Selection
 
