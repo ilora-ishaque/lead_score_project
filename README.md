@@ -25,7 +25,35 @@ To achieve this objective, it was further broken down into the following 4 techn
 
 From the exploratory data analysis, we found out that 'Converted' behaviour patterns are cahracterised by:
 
-* Insight about 'Converted' vs 'Non converted' #1
+* Their current occupation. Housewives and working professionals convert at higher rate comparet to others such as students or unempolyed. Possibly because of more disposable income.
+* Leads that interacted with a sales person (e.g. via chat option, phone call) have much higher rates of conversion
+* Majority of information collected is not useful for lead conversion prediction
+
+## Features Selection 
+
+The dataset came with many multi-categorical features with low predictive power. Thorough feature selection including importance feature selection was performed. Columns dropped were ..... 
+This achieved a  __ increas in ptocessing time and a __ decrease in space. 
+
+As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8.
+
+## Model Selection
+
+Models were compared between each other using ROC AUC since we're dealing with binary classification task and the label distribution is relatively balanced.
+2 models (LightGBM and and CatBoost) were tuned for 50 iterations. 
+The best performing model is CatBoost with the following parameters:
+```json
+{'classifier__random_strength': 1,
+ 'classifier__learning_rate': 0.5,
+ 'classifier__l2_leaf_reg': 7,
+ 'classifier__iterations': 10,
+ 'classifier__depth': 10,
+ 'classifier__border_count': 50,}
+```
+
+ ![ROC and PR curves](assets/roc_pr_curves.png)
+
+
+
 
 
 
