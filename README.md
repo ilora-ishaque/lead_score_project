@@ -8,7 +8,7 @@ The dataset contains the leads origin (e.g., Google, referrals, or landing pages
 
 
 ## Objectives
-An anonymous education company sell online courses to professionals. They want to go from the current low lead conversion rate of approximately 30%, to an overall lead conversion rate to 80%. A lead scoring model needs to be developed to indetify promising leads, which would then take priority in the sales team efforts. 
+An anonymous education company sells online courses to professionals. They want to go from the current low lead conversion rate of approximately 30%, to an overall lead conversion rate to 80%. A lead scoring model needs to be developed to indetify promising leads, which would then take priority in the sales team efforts. 
 
 The main objective of this project is:
 
