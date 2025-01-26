@@ -8,7 +8,7 @@ The dataset contains the leads origin (e.g., Google, referrals, or landing pages
 
 
 ## Objectives
-An anonymous education company sell online courses to professionals. They want to go from the current low lead conversion rate of approximately 30%, to an overall lead conversion rate to 80%. A lead scoring model needs to be developed to indetify promising leads, which would then take priority in the sales team efforts. 
+An anonymous education company sells online courses to professionals. They want to go from the current low lead conversion rate of approximately 30%, to an overall lead conversion rate to 80%. A lead scoring model needs to be developed to indetify promising leads, which would then take priority in the sales team efforts. 
 
 The main objective of this project is:
 
@@ -29,12 +29,12 @@ From the exploratory data analysis, we found out that 'Converted' behaviour patt
 * Leads that interacted with a sales person (e.g. via chat option, phone call) have much higher rates of conversion
 * Majority of information collected is not useful for lead conversion prediction
 
-## Features Selection 
+<!-- ## Features Selection 
 
 The dataset came with many multi-categorical features with low predictive power. Thorough feature selection including importance feature selection was performed. Columns dropped were ..... 
-This achieved a  __ increas in ptocessing time and a __ decrease in space. 
+This achieved a  __ increase in ptocessing time and a __ decrease in space. 
 
-As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8.
+As a result of this feature engineering work, the ROC AUC for the final model has increased by 30% and has improved F1 score uplift from the baseline model from 1.5 to 1.8. -->
 
 ## Model Selection
 
@@ -53,6 +53,12 @@ The best performing model is CatBoost with the following parameters:
  ![ROC and PR curves](assets/roc_pr_curves.png)
 
 
+CatBoost and LightGBM  have practically identical ROC AUC values. From the PR AUC curves, we can also see that the two models are very similar. Nevertheless, CatBoost performs marginally better, thus it is chosen.
+
+### Model Explainability
+The selected model benefits mostly by the contribution of all the features. However the total time spent on the website and whether the lead has tag 'Will revert after reading email' or not, seem to disproportionately have high importance. 
+
+![Shap](assets/shap_beeswarm_plot.png)
 
 
 
